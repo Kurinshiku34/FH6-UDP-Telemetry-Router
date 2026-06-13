@@ -12,7 +12,7 @@ using System.Windows.Forms;
 namespace FH6_UDPort_Forwarder {
     public partial class Form1 : Form {
         private AppSettings _settings;
-        private string _settingsFilePath = "config.json";
+        private string _settingsFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.json");
         private CancellationTokenSource _cancellationTokenSource;
         private bool _isRunning = false;
 
