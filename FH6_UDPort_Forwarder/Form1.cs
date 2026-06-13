@@ -88,7 +88,7 @@ namespace FH6_UDPort_Forwarder {
         // ==========================================
         private void BtnHelp_Click(object sender, EventArgs e) {
             string myPath = Application.ExecutablePath;
-            string launchCode = $"start \"\" \"{myPath}\" && %command%";
+            string launchCode = $"cmd /c start \"\" \"{myPath}\" && %command%";
 
             Form helpForm = new Form {
                 Text = "Steam Automation Guide",
@@ -224,6 +224,14 @@ namespace FH6_UDPort_Forwarder {
                     Log($"Not found: {path}");
                 }
             }
+        }
+
+        // ==========================================
+        // Safety for closing window
+        // ==========================================
+        protected override void OnFormClosing(FormClosingEventArgs e) {
+            Environment.Exit(0);
+            base.OnFormClosing(e);
         }
     }
 
