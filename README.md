@@ -34,7 +34,7 @@ You can configure Steam to automatically open this router when you launch Forza 
 2. Go to **Properties > General**.
 3. Paste the following code into the **Launch Options** box:
 ```text
-   start "" "C:\Path\To\Your\FH6_UDPort_Forwarder.exe" && %command%
+   cmd /c start "" "C:\Path\To\Your\FH6_UDPort_Forwarder.exe" && %command%
 ```
 *(Note: Replace `C:\Path\To\Your\...` with the actual path where you placed the router application).*
 
