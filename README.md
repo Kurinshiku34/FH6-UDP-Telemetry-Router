@@ -35,3 +35,17 @@ You can configure Steam to automatically open this router when you launch Forza 
 3. Paste the following code into the **Launch Options** box:
 ```text
    start "" "C:\Path\To\Your\FH6_UDPort_Forwarder.exe" && %command%
+```
+*(Note: Replace `C:\Path\To\Your\...` with the actual path where you placed the router application).*
+
+## 🛠️ How to Build (For Developers)
+If you want to compile the source code yourself or contribute to the project:
+
+1. Clone the repository.
+2. Open the `.sln` file using **Visual Studio 2022**.
+3. Ensure you have the **.NET 8.0 SDK** installed.
+4. Build the project using the `Release` and `win-x64` configuration.
+5. If you want a single executable without required runtime installations, set the deployment mode to `Self-contained` and check `Produce single file` in the publish settings.
+
+## 📄 License
+This project is open-source and available under the MIT License. Feel free to fork, modify, and use it in your own sim-racing projects!
